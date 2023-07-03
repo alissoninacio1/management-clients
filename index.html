@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="main.js" defer></script>
+    <title>CRUD</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Customer Base</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="customerRegister">Register Customer</button>
+        <table id="tableClient" class="records">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>Mary</td>
+                    <td>mary@gmail.com</td>
+                    <td>+1 8545287691</td>
+                    <td>Centerville</td>
+                    <td>
+                        <button type="button" class="button green">Edit</button>
+                        <button type="button" class="button red">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Kreb</td>
+                    <td>jorge-kreb@gmail.com</td>
+                    <td>+1 8165222245</td>
+                    <td>Manti</td>
+                    <td>
+                        <button type="button" class="button green">Edit</button>
+                        <button type="button" class="button red">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alonso Hernandez</td>
+                    <td>alonsohern@gmail.com</td>
+                    <td>+1 5768923415</td>
+                    <td>Phoenix</td>
+                    <td>
+                        <button type="button" class="button green">Edit</button>
+                        <button type="button" class="button red">Remove</button>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>New Customer</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text"  id="name"  data-index="new" class="modal-field" placeholder="Name" required>
+                    <input type="email" id="email"  class="modal-field" placeholder="Email" required>
+                    <input type="text" id="phone"  class="modal-field" placeholder="Phone" required>
+                    <input type="text"  id="city"  class="modal-field" placeholder="City" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="save" class="button green">Save</button>
+                    <button id="cancel" class="button blue">Cancel</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; Alisson Inacio
+    </footer>
+</body>
+</html>
